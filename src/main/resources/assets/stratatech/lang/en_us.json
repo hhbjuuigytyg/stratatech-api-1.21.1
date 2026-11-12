@@ -1,0 +1,13 @@
+{
+  "itemGroup.stratatech": "Example Mod Tab",
+  "block.stratatech.example_block": "Example Block",
+  "item.stratatech.example_item": "Example Item",
+
+  "stratatech.configuration.title": "stratatech Configs",
+  "stratatech.configuration.section.stratatech.common.toml": "stratatech Configs",
+  "stratatech.configuration.section.stratatech.common.toml.title": "stratatech Configs",
+  "stratatech.configuration.items": "Item List",
+  "stratatech.configuration.logDirtBlock": "Log Dirt Block",
+  "stratatech.configuration.magicNumberIntroduction": "Magic Number Text",
+  "stratatech.configuration.magicNumber": "Magic Number"
+}
