@@ -41,8 +41,25 @@ public class stratatech {
 
 
     public stratatech(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
+        BiomeAPI.init(modEventBus, stratatech.MOD_ID);
+
+        var lavender = BiomeAPI.registerBiome(
+                "strata_tech", "lavender_field",
+                BiomeAPI.parseHeightmap("plains"),
+                BiomeEnums.Surface.NORMAL,
+                BiomeEnums.RiverBlend.FLOODPLAIN,
+                true
+        );
+
+        BiomeAPI.place(lavender)
+                .replaces(BiomeEnums.Layer.PLAINS)
+                .temperature(5f, 18f)
+                .rainfall(150f, 300f)
+                .rarity(0.05f)
+                .register();
+
         modEventBus.addListener(this::commonSetup);
+
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

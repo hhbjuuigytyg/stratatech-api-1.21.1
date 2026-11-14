@@ -118,6 +118,7 @@ configurations {
 dependencies {
     implementation files('libs/BiomesOPlenty-neoforge-1.21.1-21.1.0.14.jar')
     implementation files('libs/TerraFirmaCraft-NeoForge-1.21.1-4.2.16.jar')
+    implementation files('libs/TFC-BiomeGen-1.21.1-1.0.1.jar')
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
@@ -191,4 +192,6 @@ idea {
     }
 }
 
-implementation fileTree(dir: 'libs', include: '*.jar')
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+}
