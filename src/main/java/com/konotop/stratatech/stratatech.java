@@ -30,33 +30,36 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.concinnity.tfcbiomegen.api.BiomeAPI;
+import com.concinnity.tfcbiomegen.api.BiomeEnums;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(stratatech.MOD_ID)
 public class stratatech {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "strata_tech";
+    public static final String MOD_ID = "stratatech";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
 
     public stratatech(IEventBus modEventBus, ModContainer modContainer) {
-        /* BiomeAPI.init(modEventBus, stratatech.MOD_ID);
+        BiomeAPI.init(modEventBus, stratatech.MOD_ID);
 
         var lavender = BiomeAPI.registerBiome(
-                "strata_tech", "lavender_field",
+                stratatech.MOD_ID, "lavender_field",
                 BiomeAPI.parseHeightmap("plains"),
                 BiomeEnums.Surface.NORMAL,
                 BiomeEnums.RiverBlend.FLOODPLAIN,
                 true
+
         );
 
         BiomeAPI.place(lavender)
                 .replaces(BiomeEnums.Layer.PLAINS)
-                .temperature(5f, 18f)
-                .rainfall(150f, 300f)v
-                .rarity(0.05f)
-                .register();*/
+                .temperature(-20f, 30f)
+                .rainfall(0f, 500f)
+                .rarity(0.5f)
+                .register();
 
         modEventBus.addListener(this::commonSetup);
 
