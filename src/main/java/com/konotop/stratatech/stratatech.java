@@ -41,7 +41,7 @@ public class stratatech {
 
 
     public stratatech(IEventBus modEventBus, ModContainer modContainer) {
-        BiomeAPI.init(modEventBus, stratatech.MOD_ID);
+        /* BiomeAPI.init(modEventBus, stratatech.MOD_ID);
 
         var lavender = BiomeAPI.registerBiome(
                 "strata_tech", "lavender_field",
@@ -56,7 +56,7 @@ public class stratatech {
                 .temperature(5f, 18f)
                 .rainfall(150f, 300f)
                 .rarity(0.05f)
-                .register();
+                .register();*/
 
         modEventBus.addListener(this::commonSetup);
 
