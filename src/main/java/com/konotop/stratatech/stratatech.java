@@ -54,7 +54,7 @@ public class stratatech {
         BiomeAPI.place(lavender)
                 .replaces(BiomeEnums.Layer.PLAINS)
                 .temperature(5f, 18f)
-                .rainfall(150f, 300f)
+                .rainfall(150f, 300f)v
                 .rarity(0.05f)
                 .register();*/
 
